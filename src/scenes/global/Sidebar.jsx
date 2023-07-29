@@ -78,7 +78,7 @@ const Sidebar = () => {
                 display="flex"
                 justifyContent="space-between"
                 alignItems="center"
-                ml="15px"
+                ml="5px"
               >
                 <Typography variant="h3" color={colors.grey[100]}>
                   DES-STOCK

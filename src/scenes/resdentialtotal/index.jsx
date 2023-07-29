@@ -3,9 +3,10 @@ import { Client } from '../../client';
 
 function ResidentialTotalList({ residentialTotals }) {
   return (
-    <div className="client-list">
+    <div className="client-list4">
+      <h1>Resdentialtotal</h1>
       {residentialTotals.map((residentialTotal) => (
-        <div key={residentialTotal._id} className="client-card">
+        <div key={residentialTotal._id} className="client-card4">
           <h3>NAME : {residentialTotal.name}</h3>
           <p>Item Code: {residentialTotal.itemCode}</p>
           <p>Description: {residentialTotal.itemDescription}</p>

@@ -3,9 +3,10 @@ import { Client } from '../../client';
 
 function ShoptotalList({ shopTotals }) {
   return (
-    <div className="client-list">
+    <div className="client-list5">
+      <h1>Shoptotal</h1>
       {shopTotals.map((shopTotal) => (
-        <div key={shopTotal._id} className="client-card">
+        <div key={shopTotal._id} className="client-card5">
           <h3>NAME : {shopTotal.name}</h3>
           <p>Item Code: {shopTotal.product}</p>
         </div>

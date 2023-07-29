@@ -1,49 +1,48 @@
-import React, { useState, useEffect } from 'react';
-import { Client } from '../../client';
+import React from 'react';
+import ClientList from"../Client"
+import OtherClientslist from"../contacts"
+import Productslist from"../Products"
+import ResidentialTotalList from "../resdentialtotal"
+import ShoptotalList from"../shoptotal"
+import StockList from"../Stock"
+import StockitemList from"../stockitem/calendar"
+import TotalEnterpriseList from "../totalenterprize"
+import { Link } from "react-router-dom";
+import { Box } from '@mui/material';
 
-function ClientList({ clients }) {
-  return (
-    <div className="client-list">
-      {clients.map((client) => (
-        <div key={client._id} className="client-card">
-          <h3>NAME : {client.name}</h3>
-          <p>Item Code: {client.itemCode}</p>
-          <p>Description: {client.itemDescription}</p>
-
-          <p>Item piece: {client.piece}</p>
-          <p>System On-hand Quantity: {client.systemOnHandQuantity}</p>
-
-          <p>Physical Actual Counting Quantity: {client.physicalActualCountingQuantity}</p>
-          <p>Shortage: {client.shortage}</p>
-
-          <p>Overage: {client.overage}</p>
-          <p>Item Status: {client.itemStatus}</p>
-          {/* Render other fields as needed */}
-        </div>
-      ))}
-    </div>
-  );
-}
 
 export default function App() {
-  const [clients, setClients] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await Client.fetch('*[_type == "client"]');
-        setClients(response);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
   return (
-    <div className="App">
-      <ClientList clients={clients} />
+ <div className="dash">   
+ <div className="auto">      
+ <Box>
+      <Link to="/"><p>Dashboard</p></Link>
+   
+      <h1>Content</h1>
+       <Link to="/client"><p>Client</p></Link>
+     <Link to="/Otherclient"><p>Other Clients</p></Link>
+     <Link to="/Products"><p>Products</p></Link>
+         <h1>Pages</h1>
+         <Link to="/Stock"><p>Stock</p></Link>
+     <Link to="/stockitem"><p>StockItem</p></Link>
+     <Link to="/total"><p>Total Enterprise</p></Link>
+     <Link to="/shop"><p>ShopTotal</p></Link>
+     <Link to="/resdential"><p>Resdential Total</p></Link>
+ 
+          </Box>
+          </div>
+     <div className="task">
+    <div className="client-list">
+    <div className='client-card'><Link to="/client"><ClientList /></Link></div>
+    <div className='client-card'><Link to="/Otherclient"><OtherClientslist /></Link></div>
+    <div className='client-card'><Link to="/Products"><Productslist /></Link></div>
+   <div className='client-card'><Link to="/Stock"><StockList /></Link></div>
+    <div className='client-card'><Link to="/stockitem"><StockitemList /></Link></div>
+    <div className='client-card'> <Link to="/total"><TotalEnterpriseList /></Link></div>
+    <div className='client-card'><Link to="/shop"><ShoptotalList /></Link></div>
+    <div className='client-card'><Link to="/resdential"><ResidentialTotalList /></Link></div>
+   </div> 
     </div>
+  </div>
   );
 }

@@ -10,7 +10,12 @@ body,
   width: 100%;
   font-family: "Source Sans Pro", sans-serif;
 }
-
+h1{
+  text-align: center;
+  padding: 10px;
+  background-color: #11121f;
+  color: whitesmoke;
+}
 .app {
   display: flex;
   position: relative;
@@ -45,18 +50,166 @@ body,
 }
 
 .client-list{
-   display: flex;
-   gap:1rem;
-   padding:1rem;   
-   flex-direction: column;
-  
+  display: grid;
+  gap: 20px 20px;
+  grid-template-columns: auto auto auto;
+  padding: 10px; 
 }
 
 .client-card{
+   overflow: auto;
    background-color:#141212; 
    border-radius:.25rem ;
-   padding:3rem ;
-   width: 250px;
+   padding:4rem ;
+   height: 570px;
+   width: 450px;
    color: aqua;
    font-size: medium;
+}
+.client-list1{
+  display: flex;
+  gap:1rem;
+  padding:1rem;   
+  flex-direction: column;
+ 
+}
+
+.client-card1{
+  background-color:#11121f; 
+  border-radius:.25rem ;
+  padding:3rem ;
+  width: 250px;
+  color: aqua;
+  font-size: medium;
+}
+.client-list2{
+  display: flex;
+  gap:1rem;
+  padding:1rem;   
+  flex-direction: column;
+ 
+}
+
+.client-card2{
+  background-color:#49103b; 
+  border-radius:.25rem ;
+  padding:3rem ;
+  width: 250px;
+  color: aqua;
+  font-size: medium;
+}
+.client-list3{
+  display: flex;
+  gap:1rem;
+  padding:1rem;   
+  flex-direction: column;
+ 
+}
+
+.client-card3{
+  background-color:#3b171a; 
+  border-radius:.25rem ;
+  padding:3rem ;
+  width: 250px;
+  color: aqua;
+  font-size: medium;
+}
+.client-list4{
+  display: flex;
+  gap:1rem;
+  padding:1rem;   
+  flex-direction: column;
+ 
+}
+
+.client-card4{
+  background-color:#0b2c13; 
+  border-radius:.25rem ;
+  padding:3rem ;
+  width: 250px;
+  color: aqua;
+  font-size: medium;
+}
+.client-list5{
+  display: flex;
+  gap:1rem;
+  padding:1rem;   
+  flex-direction: column;
+ 
+}
+
+.client-card5{
+  background-color:#2a300b; 
+  border-radius:.25rem ;
+  padding:3rem ;
+  width: 250px;
+  color: aqua;
+  font-size: medium;
+}
+.client-list6{
+  display: flex;
+  gap:1rem;
+  padding:1rem;   
+  flex-direction: column;
+ 
+}
+
+.client-card6{
+  background-color:#1d3f2a; 
+  border-radius:.25rem ;
+  padding:3rem ;
+  width: 250px;
+  color: aqua;
+  font-size: medium;
+}
+.client-list7{
+  display: flex;
+  gap:1rem;
+  padding:1rem;   
+  flex-direction: column;
+ 
+}
+
+.client-card7{
+  background-color:#501212; 
+  border-radius:.25rem ;
+  padding:3rem ;
+  width: 250px;
+  color: aqua;
+  font-size: medium;
+}
+.client-list8{
+  display: flex;
+  gap:1rem;
+  padding:1rem;   
+  flex-direction: column;
+ 
+}
+
+.client-card8{
+  background-color:#401f53; 
+  border-radius:.25rem ;
+  padding:3rem ;
+  width: 250px;
+  color: aqua;
+  font-size: medium;
+}
+.auto{
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .client-list{
+    display: none;
+  }
+  .auto{
+    display: flex;
+    font-size: 30px;
+  }
+  .auto p{
+    color: #e0e0e0;
+    text-decoration: none;
+  }
+  .task{
+    display: none;
+  }
 }
