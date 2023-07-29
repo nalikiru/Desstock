@@ -18,11 +18,11 @@ export default function App() {
  <Box>
       <Link to="/"><p>Dashboard</p></Link>
    
-      <h1>Content</h1>
+      <h2>Content</h2>
        <Link to="/client"><p>Client</p></Link>
      <Link to="/Otherclient"><p>Other Clients</p></Link>
      <Link to="/Products"><p>Products</p></Link>
-         <h1>Pages</h1>
+         <h2>Pages</h2>
          <Link to="/Stock"><p>Stock</p></Link>
      <Link to="/stockitem"><p>StockItem</p></Link>
      <Link to="/total"><p>Total Enterprise</p></Link>
