@@ -10,6 +10,12 @@ body,
   width: 100%;
   font-family: "Source Sans Pro", sans-serif;
 }
+h2{
+  text-align: center;
+  padding: 10px;
+  background-color: #11121f;
+  color: whitesmoke;
+}
 h1{
   text-align: center;
   padding: 10px;
