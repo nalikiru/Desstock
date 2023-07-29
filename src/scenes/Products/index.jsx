@@ -6,7 +6,7 @@ function Productslist({ Products }) {
       <h1>Products</h1>
       {Products.map((Products) => (
         <div key={Products._id} className="client-card3">
-          <h3>productName : {Products.ProductName}</h3>
+          <h3>productName : {Products.productn}</h3>
           <p>Dr: {Products.Dr}</p>
           <p>Cr: {Products.Cr}</p>
 
