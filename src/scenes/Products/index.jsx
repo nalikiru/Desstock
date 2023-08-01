@@ -27,8 +27,8 @@ function Productslist({ Products }) {
           
           <h3>product: {product.productn}</h3>
           <p>Dr: {product.Dr}</p>
-          <p>Cr: {product.Cr}</p>
-          <p>Balance: {product.Balance}</p>
+          <p>Cr: {product.cr}</p>
+          <p>Balance: {product.balance}</p>
           <p>Date: {new Date(product.date).toLocaleDateString()}</p>
         </div>
       ))}
