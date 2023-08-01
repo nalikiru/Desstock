@@ -7,7 +7,6 @@ function StockitemList({ stockitems }) {
       <h1>Stockitem</h1>
       {stockitems.map((stockitem) => (
         <div key={stockitem._id} className="client-card7">
-          <h3>NAME : {stockitem.name}</h3>
           <p>Item Code: {stockitem.itemCode}</p>
           <p>Description: {stockitem.itemDescription}</p>
 
