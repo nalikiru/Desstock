@@ -1,17 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import { Client } from '../../client';
+import CloseIcon from '@mui/icons-material/Close';
+
 function Productslist({ Products }) {
+  const deleteProducts = (id) => {
+    Client
+      .delete(id)
+      .then(() => {
+        window.location.reload();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <div className="client-list3">
       <h1>Products</h1>
-      {Products.map((Products) => (
-        <div key={Products._id} className="client-card3">
-          <h3>productName : {Products.productn}</h3>
-          <p>Dr: {Products.Dr}</p>
-          <p>Cr: {Products.Cr}</p>
-
-          <p>Balance: {Products.Balance}</p>
-          <p>Date: {Products.date}</p>
+      
+      {Products.map((product) => (
+        <div key={product._id} className="client-card3">
+          <CloseIcon onClick={(e) => {
+            e.stopPropagation();
+            deleteProducts(product._id);
+          }} />
+          
+          <h3>product: {product.productn}</h3>
+          <p>Dr: {product.Dr}</p>
+          <p>Cr: {product.Cr}</p>
+          <p>Balance: {product.Balance}</p>
+          <p>Date: {new Date(product.date).toLocaleDateString()}</p>
         </div>
       ))}
     </div>
@@ -24,7 +42,7 @@ export default function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await Client.fetch('*[_type == "Products"]');
+        const response = await Client.fetch('*[_type == "products"]');
         setProducts(response);
       } catch (error) {
         console.error(error);
