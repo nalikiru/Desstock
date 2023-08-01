@@ -7,7 +7,6 @@ function ResidentialTotalList({ residentialTotals }) {
       <h1>Resdentialtotal</h1>
       {residentialTotals.map((residentialTotal) => (
         <div key={residentialTotal._id} className="client-card4">
-          <h3>NAME : {residentialTotal.name}</h3>
           <p>Item Code: {residentialTotal.itemCode}</p>
           <p>Description: {residentialTotal.itemDescription}</p>
 
