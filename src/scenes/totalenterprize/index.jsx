@@ -7,7 +7,6 @@ function TotalEnterpriseList({ totalEnterprises }) {
       <h1>TotalEnterprise</h1>
       {totalEnterprises.map((totalEnterprise) => (
         <div key={totalEnterprise._id} className="client-card8">
-          <h3>NAME : {totalEnterprise.name}</h3>
           <p>Item Code: {totalEnterprise.itemCode}</p>
           <p>Description: {totalEnterprise.itemDescription}</p>
 
